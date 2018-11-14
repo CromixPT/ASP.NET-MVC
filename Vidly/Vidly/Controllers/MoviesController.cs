@@ -13,9 +13,14 @@ namespace Vidly.Controllers
 
         }
 
-        public ActionResult Edit(int id)
+        //public ActionResult Edit(int id)
+        //{
+        //    return Content("id=" + id);
+        //}
+
+        public ActionResult ByReleaseDate(int year, int month)
         {
-            return Content("id=" + id);
+            return Content(year + "/" + month);
         }
     }
 }
