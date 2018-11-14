@@ -9,10 +9,13 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
-            //return View(movie);
-            //return HttpNotFound();
-            //return new EmptyResult();
-            return RedirectToAction("Index", "Home");
+            return View(movie);
+
+        }
+
+        public ActionResult Edit(int id)
+        {
+            return Content("id=" + id);
         }
     }
 }
