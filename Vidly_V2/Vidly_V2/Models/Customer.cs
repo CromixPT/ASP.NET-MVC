@@ -14,6 +14,9 @@ namespace Vidly_V2.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }
+        //One way to change the information that appears on a label for the field is to 
+        //change its Display annotation
+        [Display(Name = "Date of Birth")]
         public DateTime? BirthDate { get; set; }
     }
 }
