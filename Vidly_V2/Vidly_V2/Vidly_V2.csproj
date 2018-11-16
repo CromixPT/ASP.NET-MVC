@@ -201,9 +201,54 @@
     <Compile Include="Migrations\201811150228406_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201811150228406_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811150256466_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201811150256466_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201811150256466_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150301012_UpdateMembershipTypeName.cs" />
+    <Compile Include="Migrations\201811150301012_UpdateMembershipTypeName.Designer.cs">
+      <DependentUpon>201811150301012_UpdateMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150334434_AddBirthDateToCustomers.cs" />
+    <Compile Include="Migrations\201811150334434_AddBirthDateToCustomers.Designer.cs">
+      <DependentUpon>201811150334434_AddBirthDateToCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150422469_UpdateBD.cs" />
+    <Compile Include="Migrations\201811150422469_UpdateBD.Designer.cs">
+      <DependentUpon>201811150422469_UpdateBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150517208_AddGenreType.cs" />
+    <Compile Include="Migrations\201811150517208_AddGenreType.Designer.cs">
+      <DependentUpon>201811150517208_AddGenreType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150525560_AddGenreToMoviesAndDatesToMovies.cs" />
+    <Compile Include="Migrations\201811150525560_AddGenreToMoviesAndDatesToMovies.Designer.cs">
+      <DependentUpon>201811150525560_AddGenreToMoviesAndDatesToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150527580_UpdateMoviesRequiredFields.cs" />
+    <Compile Include="Migrations\201811150527580_UpdateMoviesRequiredFields.Designer.cs">
+      <DependentUpon>201811150527580_UpdateMoviesRequiredFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150528307_PopulateGenreType.cs" />
+    <Compile Include="Migrations\201811150528307_PopulateGenreType.Designer.cs">
+      <DependentUpon>201811150528307_PopulateGenreType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811160133516_UpdateOfGenretypeAttributes.cs" />
+    <Compile Include="Migrations\201811160133516_UpdateOfGenretypeAttributes.Designer.cs">
+      <DependentUpon>201811160133516_UpdateOfGenretypeAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811160136038_DropGenreType_ID.cs" />
+    <Compile Include="Migrations\201811160136038_DropGenreType_ID.Designer.cs">
+      <DependentUpon>201811160136038_DropGenreType_ID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811160151474_UpdateToMovie.cs" />
+    <Compile Include="Migrations\201811160151474_UpdateToMovie.Designer.cs">
+      <DependentUpon>201811160151474_UpdateToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\GenreType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -272,6 +317,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -304,6 +350,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811150228406_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201811150228406_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150256466_AddNameToMembershipType.resx">
+      <DependentUpon>201811150256466_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150301012_UpdateMembershipTypeName.resx">
+      <DependentUpon>201811150301012_UpdateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150334434_AddBirthDateToCustomers.resx">
+      <DependentUpon>201811150334434_AddBirthDateToCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150422469_UpdateBD.resx">
+      <DependentUpon>201811150422469_UpdateBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150517208_AddGenreType.resx">
+      <DependentUpon>201811150517208_AddGenreType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150525560_AddGenreToMoviesAndDatesToMovies.resx">
+      <DependentUpon>201811150525560_AddGenreToMoviesAndDatesToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150527580_UpdateMoviesRequiredFields.resx">
+      <DependentUpon>201811150527580_UpdateMoviesRequiredFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150528307_PopulateGenreType.resx">
+      <DependentUpon>201811150528307_PopulateGenreType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811160133516_UpdateOfGenretypeAttributes.resx">
+      <DependentUpon>201811160133516_UpdateOfGenretypeAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811160136038_DropGenreType_ID.resx">
+      <DependentUpon>201811160136038_DropGenreType_ID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811160151474_UpdateToMovie.resx">
+      <DependentUpon>201811160151474_UpdateToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
