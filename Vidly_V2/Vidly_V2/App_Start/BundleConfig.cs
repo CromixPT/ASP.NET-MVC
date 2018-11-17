@@ -27,7 +27,7 @@ namespace Vidly_V2
             bundles.Add(new StyleBundle("~/Content/css").Include(
               "~/Content/bootstrap-lumen.css",
               "~/Content/bootstrap-datepicker3.css",
-              "~/Content/site.css"));
+              "~/Content/Site.css"));
         }
     }
 }
