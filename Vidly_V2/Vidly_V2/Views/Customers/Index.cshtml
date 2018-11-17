@@ -14,6 +14,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Customers</h2>
+@Html.ActionLink("New Customer", "New", "Customers", new { @class = "btn btn-primary" })
+<div style="height: 10px"></div>
 @if(!Model.Any())
 {
     <p>We don't have any customers yet.</p>

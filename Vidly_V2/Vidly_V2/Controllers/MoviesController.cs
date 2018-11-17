@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Vidly_V2.Models;
-
+using Vidly_V2.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -15,6 +15,28 @@ namespace Vidly.Controllers
             _context = new ApplicationDbContext();
         }
 
+        public ActionResult New()
+        {
+            var genreTypes = _context.GenreTypes.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                GenreTypes = genreTypes
+            };
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if(movie.Id == 0)
+            {
+                movie.AddDate = System.DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
