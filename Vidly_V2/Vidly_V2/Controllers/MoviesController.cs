@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly_V2.Models;
@@ -30,7 +31,7 @@ namespace Vidly.Controllers
         {
             if(movie.Id == 0)
             {
-                movie.AddDate = System.DateTime.Now;
+                movie.AddDate = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else
