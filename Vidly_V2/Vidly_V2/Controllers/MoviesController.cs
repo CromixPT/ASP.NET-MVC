@@ -33,7 +33,15 @@ namespace Vidly.Controllers
                 movie.AddDate = System.DateTime.Now;
                 _context.Movies.Add(movie);
             }
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
 
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreTypeId = movie.GenreTypeId;
+                movieInDb.Stock = movie.Stock;
+            }
             _context.SaveChanges();
             return RedirectToAction("Index", "Movies");
         }
@@ -54,8 +62,14 @@ namespace Vidly.Controllers
             var movie = _context.Movies.Include(m => m.GenreType).SingleOrDefault(m => m.Id == id);
             if(movie == null)
                 return HttpNotFound();
-            return View(movie);
 
+            var genreTypes = _context.GenreTypes.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                movie = movie,
+                GenreTypes = genreTypes
+            };
+            return View("MovieForm", viewModel);
         }
 
     }
