@@ -20,6 +20,7 @@ namespace Vidly_V2.Models
 
         [Required]
         [Display(Name = "Quantity in stock")]
+        [Range(1, 20)]
         public byte Stock { get; set; }
 
 
