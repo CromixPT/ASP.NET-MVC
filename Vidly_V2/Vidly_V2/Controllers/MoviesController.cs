@@ -70,7 +70,7 @@ namespace Vidly.Controllers
 
         public ActionResult Details(byte id)
         {
-            var movie = _context.Movies.Include(m => m.GenreType).SingleOrDefault(m => m.Id == id);
+            var movie = _context.Movies.Where(m => m.Id == id).Include(m => m.GenreType).SingleOrDefault();
             if(movie == null)
             {
                 return HttpNotFound();
