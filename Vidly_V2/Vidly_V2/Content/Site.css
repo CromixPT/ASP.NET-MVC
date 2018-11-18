@@ -32,3 +32,8 @@ textarea {
 .field-validation-error {
     color: red;
 }
+
+.validation-summary-errors {
+    
+    color: firebrick;
+}
