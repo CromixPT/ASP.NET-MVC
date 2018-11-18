@@ -24,6 +24,7 @@ namespace Vidly_V2.Models
         //change its Display annotation
         [Display(Name = "Date of Birth")]
         [DataType(DataType.Date)]
+        [Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
     }
 }
